@@ -29,7 +29,14 @@
   --sl-color-accent: #3156b3;
   --sl-color-accent-high: #233d86;
 }
-header.header { padding:0; }
+header.header {
+  padding:0;
+  background-color:rgba(17,18,23,.95);
+  background-color:color-mix(in srgb,var(--sl-color-bg-nav) 95%,transparent);
+  -webkit-backdrop-filter:blur(8px);
+  backdrop-filter:blur(8px);
+}
+:root[data-theme='light'] header.header { background-color:rgba(255,255,255,.95); background-color:color-mix(in srgb,var(--sl-color-bg-nav) 95%,transparent); }
 .wiki-header { display:flex; align-items:center; justify-content:space-between; height:100%; width:100%; padding-left:16px; }
 .wiki-brand { color:#f4f3f0; font:800 20px 'Archivo Variable', sans-serif; letter-spacing:-.045em; text-decoration:none; white-space:nowrap; }
 .wiki-brand span { color:#b9cbff; font-weight:400; }
@@ -106,9 +113,9 @@ header.header { padding:0; }
   :root[data-has-sidebar] header.header { padding:0 0 0 40px; }
   .wiki-header { padding:0 0 0 12px; }
   .wiki-header-link, .wiki-header-cta { padding:0 13px; }
-  .sl-menu-button { top:0; inset-inline-start:0; inset-inline-end:auto; width:40px; height:var(--sl-nav-height); border:0; border-radius:0; background:var(--sl-color-bg-nav); box-shadow:none; color:#a4a6b2; }
+  .sl-menu-button { top:0; inset-inline-start:0; inset-inline-end:auto; width:40px; height:var(--sl-nav-height); border:0; border-radius:0; background:transparent; box-shadow:none; color:#a4a6b2; }
   .sl-menu-button:hover { background:#1b1c24; color:#f4f3f0; }
-  :root[data-theme='light'] .sl-menu-button { background:#fff; color:#545b69; }
+  :root[data-theme='light'] .sl-menu-button { background:transparent; color:#545b69; }
   :root[data-theme='light'] .sl-menu-button:hover { background:#f0f2f5; color:#20232b; }
   .wiki-home { padding-top:12px; }
   .wiki-section-heading { margin-top:65px; }
