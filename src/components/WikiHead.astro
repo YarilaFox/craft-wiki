@@ -14,6 +14,9 @@ const embed = serializeComponentEmbed(componentEmbed(preview, Astro.url.pathname
 
 <Default />
 <ClientRouter fallback="swap" />
+<script>
+  import '../scripts/wikiVideo';
+</script>
 {[interFont, archivoFont, monoFont, serifFont].map(font => <link rel="preload" href={font} as="font" type="font/woff2" crossorigin="anonymous" />)}
 <script is:inline>
   if (!window.__wikiMotionStarted && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {

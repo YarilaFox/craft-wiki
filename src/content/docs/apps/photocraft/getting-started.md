@@ -9,6 +9,36 @@ sidebar:
 
 The quickest way is [ArtCraft Launcher](https://github.com/storytold/craft-launcher/releases/latest): install it, then press **Install** on PhotoCraft's card. To download PhotoCraft on its own, see [Install and update](/apps/photocraft/install-update/).
 
+<figure class="wiki-video">
+  <div class="wiki-video-shell">
+    <div class="wiki-video-frame">
+      <video controls playsinline preload="none" width="2218" height="982" data-duration="39.283333" poster="/assets/tutorials/photocraft/install-windows.webp" aria-label="Install PhotoCraft with ArtCraft Launcher on Windows" aria-describedby="photocraft-install-caption">
+        <source src="/assets/tutorials/photocraft/install-windows.mp4" type="video/mp4" />
+        <a href="/assets/tutorials/photocraft/install-windows.mp4">Watch the PhotoCraft installation video.</a>
+      </video>
+      <button class="wiki-video-launch" type="button" aria-label="Play installation walkthrough" hidden><span class="wiki-video-play-icon" aria-hidden="true"></span></button>
+    </div>
+    <div class="wiki-video-controls" role="group" aria-label="Video controls" hidden>
+      <button type="button" data-action="play" aria-label="Play video"><span class="wiki-video-play-icon" aria-hidden="true"></span></button>
+      <output class="wiki-video-time" aria-label="Playback time" aria-live="off">0:00 / 0:39</output>
+      <input type="range" min="0" max="39.283333" step="0.05" value="0" aria-label="Seek video" disabled />
+    </div>
+  </div>
+  <p class="wiki-video-status" role="status" hidden></p>
+  <figcaption id="photocraft-install-caption">Installing ArtCraft Launcher and PhotoCraft on Windows. Waiting time is sped up. <a href="/assets/tutorials/photocraft/install-windows.mp4">Open video</a></figcaption>
+</figure>
+
+<details>
+  <summary>Steps shown in the video</summary>
+  <ol>
+    <li>Download the Windows installer for ArtCraft Launcher and open it.</li>
+    <li>Follow the setup wizard, confirm the install folder and choose <strong>Install</strong>. When it finishes, open the Launcher.</li>
+    <li>Find PhotoCraft and choose <strong>Install</strong>.</li>
+    <li>Confirm the folder for the Craft Apps, then choose <strong>Install</strong> again.</li>
+    <li>Wait for installation to finish. PhotoCraft's button changes to <strong>Open</strong>.</li>
+  </ol>
+</details>
+
 ## 2. Open an image
 
 PhotoCraft opens on its **Home** screen. Choose **Open…** and pick an image, or pick one under **Recent**. To start from nothing, choose **New file**, set the size and click **Create**.
