@@ -1,0 +1,53 @@
+---
+// Match the size and pace of the ArtCraft website's snow.
+const flakes = Array.from({ length: 36 }, (_, index) => ({
+  left: `${(index * 37.7 + 3) % 100}%`,
+  '--size': `${((2 + ((index * 13) % 23) / 10) * 1.2).toFixed(2)}px`,
+  '--drift': `${((index * 23) % 73) - 36}px`,
+  '--duration': `${15 + (index * 7) % 13}s`,
+  '--delay': `-${(index * 7.3) % 27}s`,
+  opacity: 0.32 + ((index * 11) % 31) / 100,
+}));
+---
+
+<div class="wiki-snow" aria-hidden="true" transition:persist="wiki-snow">
+  {flakes.map((flake) => <span style={flake}></span>)}
+</div>
+
+<style>
+  .wiki-snow {
+    position: fixed;
+    z-index: 1;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    color: #bfcdf6;
+    mask-image: radial-gradient(ellipse 50% 65% at center, transparent 48%, #000 100%);
+  }
+
+  :global(:root[data-theme='light']) .wiki-snow {
+    color: #718aa4;
+  }
+
+  .wiki-snow span {
+    position: absolute;
+    inset-block-start: -6px;
+    inline-size: var(--size);
+    block-size: var(--size);
+    border-radius: 50%;
+    background: currentColor;
+    animation: fall var(--duration) var(--delay) linear infinite;
+  }
+
+  @keyframes fall {
+    to { transform: translate3d(var(--drift), calc(100dvh + 6px), 0); }
+  }
+
+  @media (max-width: 48rem) {
+    .wiki-snow span:nth-child(n + 21) { display: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .wiki-snow { display: none; }
+  }
+</style>
